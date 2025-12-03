@@ -3,13 +3,14 @@ import java.util.Scanner;
 import java.util.Arrays;
 class missingnumber{
     public static int missing(int[] nums){
-        int missingNumber = 0;
+        Arrays.sort(nums);
+        int missNum = 1;
         for(int i = 0;i<nums.length;i++){
-            if(nums[i] == i){
-                missingNumber = i + 1;
+            if(nums[i] == missNum){
+                missNum++;
             }
         }
-        return missingNumber;
+        return missNum;
     }
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
@@ -21,6 +22,6 @@ class missingnumber{
             nums[i] = scan.nextInt();
         }
         int result = missing(nums);
-        System.out.println("Missing Number is : "+result);
+        System.out.println("Missing Number is :"+result);
     }
 }
