@@ -12,10 +12,6 @@ class Removeduplicates{
             String myString = String.valueOf(arr);
             removing = removing + myString;
         }
-        // String reverse = "";
-        // for(int i = removing.length()-1;i>=0;i--){
-        //     reverse = reverse + removing.charAt(i);
-        // }
         return removing;
     }
     public static void main(String[] args){
