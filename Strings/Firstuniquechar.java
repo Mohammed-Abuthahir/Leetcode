@@ -1,3 +1,4 @@
+// 387. First Unique Character in a String
 import java.util.*;
 import java.util.Arrays;
 import java.util.Scanner;
