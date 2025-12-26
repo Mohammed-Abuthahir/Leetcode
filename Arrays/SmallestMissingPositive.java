@@ -5,7 +5,7 @@ class SmallestMissingPositive{
     public static int missingpositive(int[] nums){
         HashSet<Integer>set = new HashSet<>();
         for(int num : nums){
-            if(num > 0){
+            if(num >= 0){
                 set.add(num);
             }
         }
