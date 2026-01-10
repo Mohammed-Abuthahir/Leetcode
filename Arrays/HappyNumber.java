@@ -12,7 +12,10 @@ class HappyNumber{
             }
             num = sum;
         }
-        return num == 1 ? true : false;
+        if(num == 1){
+            return true;
+        }
+        return false;
     }
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
