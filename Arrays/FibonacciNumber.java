@@ -1,3 +1,4 @@
+// 509. Fibonacci Number
 import java.util.*;
 import java.util.Scanner;
 import java.util.Arrays;
@@ -17,7 +18,6 @@ class FibonacciNumber{
             b = c;
         }
         return list.get(num - 1) + list.get(num - 2);
-
     }
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
