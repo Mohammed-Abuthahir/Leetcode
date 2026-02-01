@@ -1,6 +1,5 @@
 // 3663. Find The Least Frequent Digit
 import java.util.*;
-import java.util.Scanner;
 import java.util.Arrays;
 class leastfrequent{
     public static int Frequent(int n){
