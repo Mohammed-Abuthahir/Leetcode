@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 class Luckynumber{
     public static ArrayList<Integer> luckynumber(int[][] nums){
-         int row = 0;
+        int row = 0;
         int cols = 0;
         int min = Integer.MAX_VALUE;
         int max = 0;
@@ -36,7 +36,6 @@ class Luckynumber{
             row = 0;
             cols++;
         }
-        
         return new ArrayList<>();
     }
     public static void main(String[] args){
