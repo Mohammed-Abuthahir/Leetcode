@@ -1,7 +1,5 @@
 // 796. Rotate String
-import java.util.*;
 import java.util.Scanner;
-import java.util.Arrays;
 class rotateString{
     public static boolean rotate(String s,String goal){
          if(s.length() != goal.length()) return false;
