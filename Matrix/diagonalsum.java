@@ -1,6 +1,5 @@
 // 1572. Matrix Diagonal Sum
 import java.util.*;
-import java.util.Scanner;
 import java.util.Arrays;
 class diagonalsum{
     public static int diagonalSum(int[][] nums){
