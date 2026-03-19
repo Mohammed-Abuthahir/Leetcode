@@ -22,14 +22,10 @@ class Robotreturnorigin{
             }
         }
         if(isUp || isDown){
-            if(Ucount > 0 && Dcount == 0) return false;
-            else if(Ucount == 0 && Dcount > 0) return false;
-            else if(Ucount != Dcount) return false;
+            if(Ucount > 0 && Dcount == 0 || Ucount == 0 && Dcount > 0 || Ucount != Dcount) return false;
         }
-        if(isLeft || isRight){
-            if(Rcount > 0 && Lcount == 0) return false;
-            else if(Rcount == 0 && Lcount > 0) return false;
-            else if(Rcount != Lcount) return false;
+        if(isLeft == true || isRight = true){
+            if(Rcount > 0 && Lcount == 0 || Rcount == 0 && Lcount > 0 || Rcount != Lcount) return false;
         }
         return true;
     }
