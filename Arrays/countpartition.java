@@ -16,7 +16,9 @@ class countpartition{
         }
         int count = 0;
         for(int i = 0;i < prefix.length - 1;i++){
-            if((suffix[i] - prefix[i]) % 2 == 0) count++;
+            if((suffix[i] - prefix[i]) % 2 == 0){
+                count++;
+            } 
         }
         return count;
     }
