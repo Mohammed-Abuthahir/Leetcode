@@ -1,4 +1,4 @@
-// 3803. Count Residue Prefixes
+// 3803.  Residue Prefixes
 import java.util.*;
 import java.util.Scanner;
 import java.util.Arrays;
