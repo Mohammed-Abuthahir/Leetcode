@@ -1,6 +1,5 @@
 // 3248. Snake in Matrix
 import java.util.*;
-
 class snakematrix {
     public static int finalPositionOfSnake(List<String> commands, int n) {
         int r = 0; 
