@@ -1,26 +1,27 @@
 import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+class inorderbinarytree {
+    static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
 
-    TreeNode() {}
+        TreeNode() {}
 
-    TreeNode(int val) {
-        this.val = val;
-        this.left = null;
-        this.right = null;
+        TreeNode(int val) {
+            this.val = val;
+            this.left = null;
+            this.right = null;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
-
-class InorderBinaryTree {
 
     // Build Tree from Array
     public static TreeNode buildTreeFromArray(int[] arr, int index) {
@@ -29,7 +30,6 @@ class InorderBinaryTree {
         }
 
         TreeNode root = new TreeNode(arr[index]);
-
         root.left = buildTreeFromArray(arr, 2 * index + 1);
         root.right = buildTreeFromArray(arr, 2 * index + 2);
 
