@@ -1,4 +1,4 @@
-// 206. Reverse Linked List
+// 206. Reverse Linked 
 import java.util.*;
 import java.util.Scanner;
 import java.util.Arrays;
