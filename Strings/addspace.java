@@ -1,7 +1,6 @@
 // 2109. Adding Spaces to a String
 import java.util.*;
-import java.util.Scanner;
-import java.util.Arrays;
+
 class addspace{
     public static String addingspaces(String s,int[] spaces){
         StringBuilder arr = new StringBuilder();
