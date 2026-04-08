@@ -1,8 +1,8 @@
-// 144. Binary Tree Preorder Traversal
+// 108. Convert Sorted Array to Binary Search Tree
 import java.util.*;
 import java.util.Scanner;
 import java.util.Arrays;
-class preorderbinarytree{
+class convertarrtoBST{
     static class TreeNode {
         int val;
         TreeNode left;
@@ -19,25 +19,14 @@ class preorderbinarytree{
             this.right = right;
         }
     }
-    public static TreeNode BuildArraytotree(int[] arr,int index){
-        if(index >= arr.length){
-            return null;
-        }
-        TreeNode root = new TreeNode(arr[index]);
-        root.left = BuildArraytotree(arr, 2 * index + 1);
-        root.right = BuildArraytotree(arr, 2 * index + 2);
+    public static TreeNode convertarrtobst(int[] nums,int left, int right){
+        Arrays.sort(nums);
+        if(left > right) return null;
+        int mid = left + (right - left) / 2;
+        TreeNode root = new TreeNode(nums[mid]);
+        root.left = convertarrtobst(nums, left , mid - 1);
+        root.right = convertarrtobst(nums, mid + 1, right);
         return root;
-    }
-    public static void preordertraversal(TreeNode root,List<Integer> nums){
-        if(root == null) return;
-        nums.add(root.val);
-        preordertraversal(root.left , nums);
-        preordertraversal(root.right , nums);
-    }
-    public static List<Integer> preordertree(TreeNode root){
-        List<Integer> nums = new ArrayList<>();
-        preordertraversal(root,nums);
-        return nums;
     }
     
     public static void main(String[] args){
@@ -49,8 +38,7 @@ class preorderbinarytree{
         for(int i = 0;i < nums.length;i++){
             nums[i] = scan.nextInt();
         }
-        TreeNode root = BuildArraytotree(nums, 0);
-        List<Integer> result = preordertree(root);
+        TreeNode result = convertarrtobst(nums, 0 , nums.length - 1);
         System.out.println(result);
     }
 }
