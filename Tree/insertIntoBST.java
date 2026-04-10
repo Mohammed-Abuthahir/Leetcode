@@ -13,16 +13,12 @@ class insertintoBST {
             this.right = null;
         }
     }
-
-    // Helper to extract values from tree to list
     public static void FilltheList(TreeNode root, List<Integer> nums) {
         if (root == null) return;
         nums.add(root.val);
         FilltheList(root.left, nums);
         FilltheList(root.right, nums);
     }
-
-    // Standard method to build a balanced BST from a sorted list or array
     public static TreeNode createBST(List<Integer> nums, int left, int right) {
         if (left > right) return null;
         int mid = left + (right - left) / 2;
@@ -31,8 +27,6 @@ class insertintoBST {
         root.right = createBST(nums, mid + 1, right);
         return root;
     }
-
-    // Initial conversion from the input array
     public static TreeNode convertarrtobst(int[] nums, int left, int right) {
         if (left > right) return null;
         int mid = left + (right - left) / 2;
@@ -41,13 +35,11 @@ class insertintoBST {
         root.right = convertarrtobst(nums, mid + 1, right);
         return root;
     }
-
-    // Made this static so it can be called from main
     public static TreeNode insertIntoBST(TreeNode root, int val) {
         List<Integer> nums = new ArrayList<>();
         FilltheList(root, nums);
         nums.add(val);
-        Collections.sort(nums); // Ensures the list is sorted for a balanced BST
+        Collections.sort(nums); 
         return createBST(nums, 0, nums.size() - 1);
     }
 
@@ -78,20 +70,14 @@ class insertintoBST {
         for (int i = 0; i < n; i++) {
             nums[i] = scan.nextInt();
         }
-        
-        // Sorting input array just in case user enters unsorted data
+    
         Arrays.sort(nums); 
-
         System.out.print("Enter the value to insert: ");
         int val = scan.nextInt();
-
-        // 1. Build initial tree
         TreeNode root = convertarrtobst(nums, 0, nums.length - 1);
-        
-        // 2. Insert and rebuild
+
         TreeNode result = insertIntoBST(root, val);
-        
-        // 3. Display
+    
         System.out.print("In-Order Traversal of result: ");
         displayTree(result,0);
         System.out.println();
