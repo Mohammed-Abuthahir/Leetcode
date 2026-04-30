@@ -1,4 +1,4 @@
-// 2133. Check if Every Row and Column Contains All Numbers
+// 2133. Check if Every Row and Column 
 import java.util.*;
 import java.util.Scanner;
 import java.util.Arrays;
