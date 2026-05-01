@@ -7,7 +7,7 @@ class checkbalancestring{
         int oddsum = 0; int evensum = 0;
         for(int i = 0;i < s.length(); i++){
             if(i % 2 == 0) evensum = evensum + s.charAt(i) - '0';
-            else oddsum = oddsum + s.charAt(i) - '0';
+            else {oddsum = oddsum + s.charAt(i) - '0'};
         }
         return oddsum == evensum;
     }
