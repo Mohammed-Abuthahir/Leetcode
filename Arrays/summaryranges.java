@@ -3,7 +3,7 @@ import java.util.*;
 import java.util.Arrays;
 import java.util.Scanner;
 class summaryranges{
-    public static List<String> summary(int[] nums){
+    public static List<String> summaryRanges(int[] nums){
         if(nums.length == 0) return new ArrayList<>();
         if(nums.length == 1) {
             List<String> str = new ArrayList<>(Arrays.asList(String.valueOf(nums[0])));
@@ -27,7 +27,6 @@ class summaryranges{
                 i++;
                 continue;
             }
-
             int start = arr.get(i);
             int end = start;
             while(i + 1 < arr.size() && arr.get(i + 1) != 9999999){
@@ -52,7 +51,7 @@ class summaryranges{
         for(int i = 0;i < nums.length;i++){
             nums[i] = scan.nextInt();
         }
-        List<String> result = summary(nums);
+        List<String> result = summaryRanges(nums);
         System.out.println(result);
     }
 }
