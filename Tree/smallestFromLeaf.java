@@ -1,4 +1,4 @@
-// 988. Smallest String Starting From Leaf
+// 988. Smallest String 
 import java.util.*;
 import java.util.Scanner;
 import java.util.Arrays;
