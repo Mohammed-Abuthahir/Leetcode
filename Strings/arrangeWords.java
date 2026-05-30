@@ -1,4 +1,4 @@
-// 1451. Rearrange Words in a Sentence
+// 1451. Rearrange Words in a 
 import java.util.*;
 import java.util.Scanner;
 import java.util.Arrays;
