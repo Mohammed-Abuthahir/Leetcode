@@ -1,4 +1,4 @@
-// 25. Reverse Nodes in k-Group
+//  Reverse Nodes in k-Group
 import java.util.*;
 import java.util.Scanner;
 import java.util.Arrays;
