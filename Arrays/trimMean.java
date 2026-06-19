@@ -1,4 +1,4 @@
-// 1619. Mean of Array After Removing Some Elements
+//  Mean of Array After Removing Some Elements
 import java.util.*;
 import java.util.Scanner;
 import java.util.Arrays;
