@@ -11,7 +11,6 @@ class shiftGrid{
             arr[0][0] = nums[m - 1][n - 1];
             for(int i = 0;i < nums.length; i++){
                 for(int j = 0;j < nums[0].length; j++){
-
                     if(j != n - 1){
                         arr[i][j + 1] = nums[i][j];
                     }
