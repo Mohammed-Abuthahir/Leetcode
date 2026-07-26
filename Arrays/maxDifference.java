@@ -1,0 +1,23 @@
+// 1913. Maximum Product Difference Between Two Pairs
+import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
+class maxDifference{
+    public static int maxProductDifference(int[] nums){
+        int n = nums.length;
+        Arrays.sort(nums);
+        return (nums[n - 1] * nums[n - 2]) - (nums[0] * nums[1]);
+    }
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the Size :");
+        int n = scan.nextInt();
+        System.out.println("Enter the Arrays :");
+        int[] nums = new int[n];
+        for(int i = 0;i < nums.length; i++){
+            nums[i] = scan.nextInt();
+        }
+        int result = maxProductDifference(nums);
+        System.out.println(result);
+    }
+}
